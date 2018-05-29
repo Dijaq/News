@@ -1,0 +1,196 @@
+
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+.navbar-laravel {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+
+.article-contenido{
+	/*background-color: #0B2161;*/
+	background-color:#0B2F3A;
+	font-weight: bold;
+	color: #FFFFFF;
+	padding: 10px;
+	font-family: Arial;
+}
+
+.nota_etiqueta{
+	position: absolute;
+	background-color: #690;
+	color: #FFFFFF;
+	padding: 3px;
+	border-bottom-right-radius: 18%;
+}
+
+.nav-link-c
+{
+	color: #FFFFFF;
+}
+
+.tipo_noticia
+{
+
+}
+
+.title_article
+{
+	font-family: "Georgia";
+	text-align: justify;
+}
+
+.summary_article
+{
+	text-align: justify;
+}
+
+.fecha_article
+{
+	color: #A4A4A4;
+}
+
+.image
+{
+	width: 100%;
+}
+
+.more_article
+{
+	padding: 0px;
+	border-bottom: 1px solid #A4A4A4;
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+}
+
+.title_more_article
+{
+	font-size: small;
+	font-weight: bold; 
+}
+
+.content_article
+{
+	margin-top: 20px;
+	text-align: justify;
+}
+
+p
+{
+	font-size: 1.1rem;
+	font-family: "Georgia";
+}
+
+.banner-block
+{
+	display: block;
+	position: fixed;
+	color: white;
+	background: black;
+	z-index: 101;
+	width: 100%;
+}
+
+.publicidad_etiqueta
+{
+	background: #F78181;
+	font-family: "Arial";
+	color: white;
+	padding: 3px;
+	margin-bottom: 3px;
+}
+
+.empresarial_etiqueta
+{
+	background: #2E64FE;
+	font-family: "Arial";
+	color: white;
+	padding: 3px;
+	margin-top: 50px;
+}
+
+.play_en_vivo
+{
+	height: 40px;
+}
+
+.image_play
+{
+	height: 40px;
+}
+
+.redes_etiqueta>a>i
+{
+	position: absolute;
+	background-color: #690;
+	color: #FFFFFF;
+	padding: 3px;
+}
+
+.redes_etiqueta
+{
+	float: right;
+}
+
+.container
+{
+	max-width: 1140px;
+}
+
+.error
+{
+	color: red;
+	font-size: 13px;
+}
+
+/*Seccion de FOOTER*/
+footer {
+    background-color: rgba(44, 62, 80, 1.0);
+
+    width: 100%;
+    bottom: 0;
+    font-weight: lighter;
+    color: white;
+}
+.footerHeader{
+    width:100%;
+    padding:1em;
+    background-color:rgba(52, 73, 94,1.0);
+    text-align:center;
+    color:white;
+}
+footer h3{
+    font-weight:lighter;
+}
+footer ul{
+    padding-left:5px;
+    list-style:none;
+}
+footer p{
+    text-align : justify;
+    font-size : 12px;
+}
+footer iframe {
+    width:100%;
+    position:relative;
+    height:170px;
+}
+.sm{
+    list-style:none;
+    overflow:auto;
+}
+.sm li {
+    display: inline;
+    padding:5px;
+    float:left;
+} 
+.sm li a img {
+    width:32px;
+}
