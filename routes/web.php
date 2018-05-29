@@ -12,7 +12,7 @@
 */
 
 
-Route::get('/', ['as' => 'home', 'uses' => 'MainController@home']);
+Route::get('home', ['as' => 'home', 'uses' => 'MainController@home']);
 
 Route::get('nota/{labelName}', ['as' => 'classified.show', 'uses' => 'MainController@show']);
 
