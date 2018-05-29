@@ -11,6 +11,15 @@
 |
 */
 
+Route::get('test', function(){
+	$user = new radioyaravi\User;
+	$user->name = 'Diego';
+	$user->email = 'dijaq089@gmail.com';
+	$user->password = bcrypt('123456');
+	$user->idRole = 1;
+	$user->estado = 2;
+	$user->save();
+});
 
 Route::get('home', ['as' => 'home', 'uses' => 'MainController@home']);
 
