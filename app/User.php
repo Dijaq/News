@@ -38,4 +38,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(News::class, 'idUser');
     }
+
+    public function publicity()
+    {
+        return $this->hasMany(News::class, 'idUser');
+    }
 }

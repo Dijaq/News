@@ -10,13 +10,19 @@ use Config;
 
 class MainController extends Controller
 {
+    function __construct()
+    {
+        $this->middleware('verifypage');
+    }
+    
     public function home()
     {
     	$publicidades = Publicidad::all()->where('estado', Config::get('constantes.estado_habilitado'));
         $labels = Label::all();
-        $idPublicidad = $publicidades[0]->id;
+        $idPublicidad = $publicidades->first()->id;
     	//$contentnews = News::with('contentnews')->get();
     	$contentnews = News::with('label')->with('contentnews')->get();
+
 
         $new_principal = News::with('label')->with('contentnews')->where('idPrioridad', Config::get('constantes.prioridad_principal'))->orderBy('fechaPublicacion', 'desc')->get()->first();
 
@@ -31,7 +37,7 @@ class MainController extends Controller
     {
         $publicidades = Publicidad::all()->where('estado', Config::get('constantes.estado_habilitado'));
         $labels = Label::all();
-        $idPublicidad = $publicidades[0]->id;
+        $idPublicidad = $publicidades->first()->id;
         //$contentnews = News::with('contentnews')->get();
         $contentnews = News::with('label')->with('contentnews')->where('idLabelNews', $labelName)->get();
 

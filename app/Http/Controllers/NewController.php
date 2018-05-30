@@ -12,6 +12,11 @@ use Config;
 
 class NewController extends Controller
 {
+    function __construct()
+    {
+        $this->middleware('verifypage');
+    }
+    
     /**
      * Display a listing of the resource.
      *
@@ -19,10 +24,10 @@ class NewController extends Controller
      */
     public function index($name, $id)
     {
-         $labels = Label::all();
+        $labels = Label::all();
         $detailnew = News::with('label')->with('contentnews')->get()->where('id', $id)->first();
         
-        $moreNews = News::with('contentnews')->take(Config::get('constantes.numero_noticias_relacionadas'))->get()->where('idLabelNews', $detailnew->idLabelNews);
+        $moreNews = News::with('contentnews')->take(Config::get('constantes.numero_noticias_relacionadas'))->where('idLabelNews', $detailnew->idLabelNews)->get();
 
         return view('main_news.detailnew', compact('detailnew', 'contentNew', 'moreNews', 'labels'));
     }

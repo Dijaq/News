@@ -24,7 +24,6 @@
 		</div>
 
 		<div class="col-md-3">
-			<br>
 			@include('columnpublicidad');
 		</div>
 	</div>

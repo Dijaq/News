@@ -46,10 +46,12 @@ class PublicityController extends Controller
     {
         $directorio = $request->file('imagenPublicidad')->store('public/publicity');  
         $publicity = new Publicidad;
-        $publicity->idUser = 1;
+        $publicity->idUser = auth()->user()->id;
         $publicity->name = $request->input('nombre');
         $publicity->url_page = $request->input('url_publicidad');
         $publicity->dir_image = $directorio;
+        $publicity->fechaInicio = $request->input('fechaInicio');
+        $publicity->fechaFin = $request->input('fechaFin');   
         $publicity->estado = Config::get('constantes.estado_habilitado');
         $publicity->save();
 

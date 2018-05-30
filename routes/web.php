@@ -19,9 +19,16 @@ Route::get('test', function(){
 	$user->idRole = 1;
 	$user->estado = 2;
 	$user->save();
+
+	$role = new radioyaravi\Role;
+	$role->name = 'admin';
+	$role->displayName = 'Administrador';
+	$role->description = 'Encargado de administrar el sitio web';
+	$role->estado = 2;
+	$role->save();
 });
 
-Route::get('home', ['as' => 'home', 'uses' => 'MainController@home']);
+Route::get('/', ['as' => 'home', 'uses' => 'MainController@home']);
 
 Route::get('nota/{labelName}', ['as' => 'classified.show', 'uses' => 'MainController@show']);
 
@@ -89,7 +96,8 @@ Route::put('noticias/{id}', ['as' => 'new.update', 'uses' => 'AdminNewsControlle
 
 Route::delete('noticias/deshabilitar/{id}', ['as' => 'new.deshabilitar', 'uses' => 'AdminNewsController@deshabilitar']);
 
-Route::delete('etiquetas/habilitar/{id}', ['as' => 'new.habilitar', 'uses' => 'AdminNewsController@habilitar']);
+//Route::delete('etiquetas/habilitar/{id}', ['as' => 'new.habilitar', 'uses' => 'AdminNewsController@habilitar']);
+
 
 
 

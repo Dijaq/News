@@ -10,7 +10,9 @@
       <tr>
         <th>Nombre</th>
         <th>Url Publicidad</th>
-        <th>Direccion Imagen</th>
+        <!--<th>Direccion Imagen</th>-->
+        <th>Fecha Inicio</th>
+        <th>Fecha Fin</th>
         <th>Acciones</th>
       </tr>
     </thead>
@@ -19,7 +21,9 @@
         <tr>
           <td>{{$publicidad->name}}</td>
           <td>{{$publicidad->url_page}}</td>
-          <td>{{$publicidad->dir_image}}</td>
+          <!--<td>{{$publicidad->dir_image}}</td>-->
+          <td>{{$publicidad->fechaInicio}}</td>
+          <td>{{$publicidad->fechaFin}}</td>
           @if($publicidad->estado == 2)
             <td align="center">
               <a class="btn btn-info btn-sm" href="{{route('publicity.edit', $publicidad->id)}}">Editar</a>

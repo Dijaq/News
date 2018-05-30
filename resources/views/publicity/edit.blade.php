@@ -30,11 +30,31 @@
               Ingrese URL de la pagina:
             </label>
           </div>
-            <div class="col-md-8">
-              <input class="form-control" type="text" name="url_publicidad" value="{{$publicidad->url_page}}">
-              {!! $errors->first('url_publicidad', '<span class="error">:message</span>') !!}
-            </div>
-                <br><br>
+          <div class="col-md-8">
+            <input class="form-control" type="text" name="url_publicidad" value="{{$publicidad->url_page}}">
+            {!! $errors->first('url_publicidad', '<span class="error">:message</span>') !!}
+          </div>
+            <br><br>
+          <div class="col-md-4">
+            <label for="fechaInicio">
+              Fecha Inicio publicidad:
+            </label>
+          </div>
+          <div class="col-md-8">
+            <input class="form-control" type="date" name="fechaInicio" value="{{old('fechaInicio')}}">
+            {!! $errors->first('fechaInicio', '<span class="error">:message</span>') !!}
+          </div>
+          <br><br>
+          <div class="col-md-4">
+            <label for="fechaFin">
+              Fecha Fin de publicidad:
+          </label>
+          </div>
+          <div class="col-md-8">
+            <input class="form-control" type="date" name="fechaFin" value="{{old('fechaFin')}}">
+            {!! $errors->first('fechaFin', '<span class="error">:message</span>') !!}
+          </div>
+          <br><br>
           <div class="col-md-4">
             <label for="dir_imagen">
               Directorio de la imagen
