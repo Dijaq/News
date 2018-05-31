@@ -7,7 +7,7 @@ use radioyaravi\News;
 
 class Label extends Model
 {
-	public $table = 'labelsnews';
+	public $table = 'labelnews';
 
 	public function news()
 	{

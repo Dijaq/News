@@ -13,7 +13,7 @@ class CreateContentNewTable extends Migration
      */
     public function up()
     {
-        Schema::create('contentNews', function (Blueprint $table) {
+        Schema::create('contentnews', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('idNews');
             $table->string('dir_image');

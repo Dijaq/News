@@ -13,7 +13,7 @@ class CreateLabelNewsTable extends Migration
      */
     public function up()
     {
-        Schema::create('labelsNews', function (Blueprint $table) {
+        Schema::create('labelnews', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
             $table->string('color');
