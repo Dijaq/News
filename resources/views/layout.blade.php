@@ -31,7 +31,7 @@
 						106.3FM - 930AM
 					</div>
 					<div class="play_en_vivo" align="right"  style="position: absolute; right: 20px; top: 5px;">
-						<img height="40px" src="{{asset('storage/public/play_button.png')}}" alt="">
+						<img height="40px" src="{{asset('storage/play_button.png')}}" alt="">
 					</div>
 				</div>
 			</div>			
