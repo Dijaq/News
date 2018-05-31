@@ -17,7 +17,6 @@ class CreateLabelNewsTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('color');
-            $table->string('color2');
             $table->string('estado');
             $table->timestamps();
         });

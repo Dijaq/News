@@ -12,7 +12,7 @@
 */
 
 Route::get('test', function(){
-	/*$user = new radioyaravi\User;
+	$user = new radioyaravi\User;
 	$user->name = 'Diego';
 	$user->email = 'dijaq089@gmail.com';
 	$user->password = bcrypt('123456');
@@ -40,7 +40,7 @@ Route::get('test', function(){
 	$role = new radioyaravi\Prioridad;
 	$role->name = 'Sin Prioridad';
 	$role->estado = 2;
-	$role->save();*/
+	$role->save();
 
 	$label = new radioyaravi\Label;
 	$label->name = 'Politica';
