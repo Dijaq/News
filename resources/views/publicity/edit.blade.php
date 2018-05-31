@@ -41,7 +41,7 @@
             </label>
           </div>
           <div class="col-md-8">
-            <input class="form-control" type="date" name="fechaInicio" value="{{old('fechaInicio')}}">
+            <input class="form-control" type="date" name="fechaInicio" value="{{$publicidad->fechaInicio}}">
             {!! $errors->first('fechaInicio', '<span class="error">:message</span>') !!}
           </div>
           <br><br>
@@ -51,7 +51,7 @@
           </label>
           </div>
           <div class="col-md-8">
-            <input class="form-control" type="date" name="fechaFin" value="{{old('fechaFin')}}">
+            <input class="form-control" type="date" name="fechaFin" value="{{$publicidad->fechaFin}}">
             {!! $errors->first('fechaFin', '<span class="error">:message</span>') !!}
           </div>
           <br><br>

@@ -3,7 +3,7 @@
 @section('contenido')
 
   <div style="text-align:center;" align="center" >
-    <h1>Nuevo Tipo de Noticia</h1>
+    <h1 >Nuevo Tipo de Noticia</h1>
     <br>
     @if(session()->has('info'))
       <h3>{{session('info')}}</h3>

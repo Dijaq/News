@@ -44,7 +44,7 @@ class PublicityController extends Controller
      */
     public function store(CreatePublicityRequest $request)
     {
-        $directorio = $request->file('imagenPublicidad')->store('public/publicity');  
+        $directorio = $request->file('dir_image')->store('public/publicity');  
         $publicity = new Publicidad;
         $publicity->idUser = auth()->user()->id;
         $publicity->name = $request->input('nombre');
@@ -53,6 +53,7 @@ class PublicityController extends Controller
         $publicity->fechaInicio = $request->input('fechaInicio');
         $publicity->fechaFin = $request->input('fechaFin');   
         $publicity->estado = Config::get('constantes.estado_habilitado');
+
         $publicity->save();
 
         return redirect()->route('publicity.index')->with('info', 'Se creo la publicadad correctamente');
@@ -78,6 +79,8 @@ class PublicityController extends Controller
     public function edit($id)
     {
         $publicidad = Publicidad::findOrFail($id);
+        $publicidad->fechaInicio =  date("Y-m-d", strtotime($publicidad->fechaInicio));
+        $publicidad->fechaFin =  date("Y-m-d", strtotime($publicidad->fechaFin));
         return view('publicity.edit', compact('publicidad'));
     }
 
@@ -94,6 +97,8 @@ class PublicityController extends Controller
 
         $publicidad->name = $request->input('nombre');
         $publicidad->url_page = $request->input('url_publicidad');
+        $publicidad->fechaInicio = $request->input('fechaInicio');
+        $publicidad->fechaFin = $request->input('fechaFin');   
         $publicidad->dir_image = $request->input('dir_image');
         
         $publicidad->update();

@@ -56,16 +56,16 @@
               <br><br>
 
               <div class="col-md-4">
-                <label for="dir_imagen">
+                <label for="dir_image">
                   Imagen de publicidad:
                 </label>
               </div>
               <div class="col-md-8">
                  <div class="custom-file">
-                    <input type="file" class="custom-file-input" id="validatedCustomFile" name="imagenPublicidad">
+                    <input type="file" class="custom-file-input" id="validatedCustomFile" name="dir_image">
                     <label class="custom-file-label" for="validatedCustomFile">Elige una imagen</label>
                     <div class="invalid-feedback">Example invalid custom file feedback</div>
-                    {!! $errors->first('imagenPublicidad', '<span class="error">:message</span>') !!}
+                    {!! $errors->first('dir_image', '<span class="error">:message</span>') !!}
                   </div>
               </div> 
 

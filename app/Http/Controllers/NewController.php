@@ -1,7 +1,7 @@
 <?php
 
 
-//Controlador que administra el contenido de una noticia
+//Controlador que administra el contenido de una noticia (Vista de USARIO)
 namespace radioyaravi\Http\Controllers;
 
 use Illuminate\Http\Request;

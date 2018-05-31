@@ -26,6 +26,21 @@ Route::get('test', function(){
 	$role->description = 'Encargado de administrar el sitio web';
 	$role->estado = 2;
 	$role->save();
+
+	$role = new radioyaravi\Prioridad;
+	$role->name = 'Principal';
+	$role->estado = 2;
+	$role->save();
+
+	$role = new radioyaravi\Prioridad;
+	$role->name = 'Secundaria';
+	$role->estado = 2;
+	$role->save();
+
+	$role = new radioyaravi\Prioridad;
+	$role->name = 'Sin Prioridad';
+	$role->estado = 2;
+	$role->save();
 });
 
 Route::get('/', ['as' => 'home', 'uses' => 'MainController@home']);

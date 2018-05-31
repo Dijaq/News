@@ -17,8 +17,9 @@ class MainController extends Controller
     
     public function home()
     {
-    	$publicidades = Publicidad::all()->where('estado', Config::get('constantes.estado_habilitado'));
-        $labels = Label::all();
+    	$publicidades = Publicidad::all()->where('estado', Config::get('constantes.estado_habilitado'))->where('fechaFin','>', now());
+        //$publicidades = Publicidad::all()->where('fechaFin','>', now());
+        $labels = Label::all()->where('estado', Config::get('constantes.estado_habilitado'));
         $idPublicidad = $publicidades->first()->id;
     	//$contentnews = News::with('contentnews')->get();
     	$contentnews = News::with('label')->with('contentnews')->get();
@@ -28,7 +29,6 @@ class MainController extends Controller
 
         $new_secundaria = News::with('label')->with('contentnews')->where('idPrioridad', Config::get('constantes.prioridad_secundaria'))->orderBy('fechaPublicacion', 'desc')->get()->first();
 
-    	//return $contentnews;
 		return view('main_news.home', compact('publicidades', 'contentnews', 'idPublicidad', 'new_principal', 'new_secundaria', 'labels'));
 	}
 

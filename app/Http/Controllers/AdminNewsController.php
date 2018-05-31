@@ -1,10 +1,12 @@
 <?php
 
+//
 namespace radioyaravi\Http\Controllers;
 
 use Illuminate\Http\Request;
 use radioyaravi\News;
 use radioyaravi\Label;
+use radioyaravi\Prioridad;
 use radioyaravi\ContentNews;
 use Config;
 
@@ -21,7 +23,8 @@ class AdminNewsController extends Controller
      */
     public function index()
     {
-        $news = News::with('label')->orderBy('fechaPublicacion','desc')->get();
+        $news = News::with('label')->orderBy('fechaPublicacion','dsc')->get();
+       // return $news;
         return view('news.index', compact('news'));
     }
 
@@ -33,8 +36,9 @@ class AdminNewsController extends Controller
     public function create()
     {
         $labels = Label::all();
+        $prioridades = Prioridad::all();
 
-        return view('news.create', compact('labels'));
+        return view('news.create', compact('labels', 'prioridades'));
     }
 
     /**
@@ -48,9 +52,9 @@ class AdminNewsController extends Controller
         $new = new News;
         $new->title = $request->input('titulo');
         $new->summary = $request->input('resumen');
-        $new->idUser = 1;
+        $new->idUser = auth()->user()->id;
         $new->idLabelNews = $request->input('label');
-        $new->idPrioridad = 2;
+        $new->idPrioridad = $request->input('prioridad');;
         $new->fechaPublicacion = now();
         $new->estado = Config::get('constantes.estado_habilitado');
         $new->save();
@@ -62,7 +66,7 @@ class AdminNewsController extends Controller
         $contentNew->estado = Config::get('constantes.estado_habilitado');
         $contentNew->save();
 
-        //return redirect()->route('new.index')->with('info', 'Se creo la etiqueta correctamente');
+        return redirect()->route('new.index')->with('info', 'Se creo la etiqueta correctamente');
     }
 
     /**
@@ -73,7 +77,7 @@ class AdminNewsController extends Controller
      */
     public function show($id)
     {
-        //
+
     }
 
     /**
@@ -84,7 +88,11 @@ class AdminNewsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $new = News::with('contentnews')->where('id', $id)->get()->first();
+        $labels = Label::all();
+        $prioridades = Prioridad::all();
+
+        return view('news.edit', compact('new','labels', 'prioridades'));
     }
 
     /**
@@ -96,7 +104,18 @@ class AdminNewsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $new = News::findOrFail($id);
+
+        return $new;
+        $new->title = $request->input('titulo');
+        $new->summary = $request->input('resumen');
+        $new->idUser = auth()->user()->id;
+        $new->idLabelNews = $request->input('label');
+        $new->idPrioridad = $request->input('prioridad');;
+        $new->fechaPublicacion = now();
+        $new->estado = Config::get('constantes.estado_habilitado');
+        $new->save();
+
     }
 
     /**
