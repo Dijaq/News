@@ -13,10 +13,11 @@ class CreateLabelNewsTable extends Migration
      */
     public function up()
     {
-        Schema::create('labelNews', function (Blueprint $table) {
+        Schema::create('labelsNews', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
             $table->string('color');
+            $table->string('color2');
             $table->string('estado');
             $table->timestamps();
         });
@@ -32,3 +33,4 @@ class CreateLabelNewsTable extends Migration
         Schema::dropIfExists('labelNews');
     }
 }
+
