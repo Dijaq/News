@@ -114,7 +114,7 @@
 				    <ul class="sm">
 				        <li><a href="https://www.facebook.com/Radio-Yarav%C3%AD-Arequipa-231060803576406/" target="_blank"><img src="https://www.facebook.com/images/fb_icon_325x325.png" class="img-responsive"></a></li>
 				        <li><a href="#" ><img src="https://lh3.googleusercontent.com/00APBMVQh3yraN704gKCeM63KzeQ-zHUi5wK6E9TjRQ26McyqYBt-zy__4i8GXDAfeys=w300" class="img-responsive" ></a></li>
-				        <li><a href="#" ><img src="http://playbookathlete.com/wp-content/uploads/2016/10/twitter-logo-4.png" class="img-responsive"  ></a></li>
+				        <li><a href="#" ><img src="https://playbookathlete.com/wp-content/uploads/2016/10/twitter-logo-4.png" class="img-responsive"  ></a></li>
 				    </ul>
 				</div>
 			</div>
