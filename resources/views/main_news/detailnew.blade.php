@@ -10,9 +10,9 @@
 				</h3>
 			</div>
 			
-			<div itemprop="headline" class="title_article"><h1>{{$detailnew->title}}</h1></div>
+			<div class="title_article"><h1>{{$detailnew->title}}</h1></div>
 
-			<div class="summary_article" itemprop="description">
+			<div class="summary_article">
 				{{$detailnew->summary}}
 			</div>
 

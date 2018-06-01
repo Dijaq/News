@@ -134,7 +134,7 @@ Route::put('empresariales/{id}', ['as' => 'empresarial.update', 'uses' => 'Empre
 
 Route::delete('empresariales/deshabilitar/{id}', ['as' => 'empresarial.deshabilitar', 'uses' => 'EmpresarialController@deshabilitar']);
 
-Route::delete('etiquetas/habilitar/{id}', ['as' => 'empresarial.habilitar', 'uses' => 'EmpresarialController@habilitar']);
+Route::delete('empresariales/habilitar/{id}', ['as' => 'empresarial.habilitar', 'uses' => 'EmpresarialController@habilitar']);
 
 
 

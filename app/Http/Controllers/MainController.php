@@ -38,7 +38,7 @@ class MainController extends Controller
     public function show($labelName)
     {
         $publicidades = Publicidad::all()->where('estado', Config::get('constantes.estado_habilitado'));
-        $labels = Label::all();
+        $labels = Label::all()->where('estado', Config::get('constantes.estado_habilitado'));
         $idPublicidad = $publicidades->first()->id;
         //$contentnews = News::with('contentnews')->get();
         $contentnews = News::with('label')->with('contentnews')->where('idLabelNews', $labelName)->get();
