@@ -54,6 +54,32 @@
 					</article>
 				</div>
 			@endforeach
+
+		
+				<div class="col-md-12">
+					<div class="empresarial_etiqueta">
+						Empresariales
+					</div>
+					<br>
+					@foreach($empresariales as $empresarial)
+						<div class="row">
+							<div class="col-md-5">
+								<img src="{{asset('storage/'.$empresarial->dir_image)}}" style="width:100%;" alt="Planeta Marte" />
+							</div>
+							<div class="col-md-7">
+								<div style="font-size: 21px; font-weight: bold; font-family: sans-serif;">
+									<a style="color: black;" href="{{route('empresarial.detail', $empresarial->id)}}">{{$empresarial->title}}</a>
+								</div>
+								<label>{{$empresarial->summary}}</label>
+								<div class="fecha_article">
+									{{$empresarial->fechaPublicacion}}
+								</div>
+							</div>
+						</div>
+						<br>
+						@endforeach
+				</div>
+
 			</div>
 
 		</div>

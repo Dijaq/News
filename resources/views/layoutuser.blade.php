@@ -32,7 +32,7 @@
 						<li class="nav-item" class="active"><a class="nav-link nav-link-c" href="{{route('label.index')}}">Etiquetas</a></li>
 						<li class="nav-item"><a class="nav-link nav-link-c" href="{{route('publicity.index')}}">Publicidad</a></li>
 						<li class="nav-item"><a class="nav-link nav-link-c" href="{{route('new.index')}}">Noticias</a></li>
-						<li class="nav-item"><a class="nav-link nav-link-c" href="#">Empresariales</a></li>
+						<li class="nav-item"><a class="nav-link nav-link-c" href={{route('empresarial.index')}}>Empresariales</a></li>
 						<li class="nav-item"><a class="nav-link" href="/logout">Cerrar Sesion de {{auth()->user()->email}}</a></li>
 					@endif
 				</ul>

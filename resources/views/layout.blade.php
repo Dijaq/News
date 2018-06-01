@@ -16,11 +16,22 @@
 		<div class="container">				
 			<div class="collapse navbar-collapse" id="navegacion_fm">
 				<ul class="navbar-nav">
-					<li class="nav-item" class="active"><a class="nav-link nav-link-c" href="#">Nosotros</a></li>
+					<!--<li class="nav-item" class="active"><a class="nav-link nav-link-c" href="#">Nosotros</a></li>-->
+
+					<li class="nav-item dropdown">
+				        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white;">
+				          Nosotros
+				        </a>
+				        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+				          <a class="dropdown-item" href={{route('nosotros.quienessomos')}}>Quienes Somos</a>
+				          <a class="dropdown-item" href={{route('nosotros.historia')}}>Historia</a>
+				          <a class="dropdown-item" href={{route('nosotros.equipotrabajo')}}>Equipo de Trabajo</a>
+				        </div>
+				      </li>
 					
-					<li class="nav-item"><a class="nav-link nav-link-c" href="#">Servicios</a></li>
-					<li class="nav-item"><a class="nav-link nav-link-c" href="#">Programación</a></li>
-					<li class="nav-item"><a class="nav-link nav-link-c" href="#">Ama Kella</a></li>
+					<li class="nav-item"><a class="nav-link nav-link-c" href={{route('servicios.index')}}>Servicios</a></li>
+					<li class="nav-item"><a class="nav-link nav-link-c" href={{route('programacion.index')}}>Programación</a></li>
+					<li class="nav-item"><a class="nav-link nav-link-c" href={{route('amakella.index')}}>Ama Kella</a></li>
 				</ul>
 			</div>
 			

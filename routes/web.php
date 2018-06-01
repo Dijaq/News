@@ -53,6 +53,8 @@ Route::get('/', ['as' => 'home', 'uses' => 'MainController@home']);
 
 Route::get('nota/{labelName}', ['as' => 'classified.show', 'uses' => 'MainController@show']);
 
+Route::get('empresarial/{id}', ['as' => 'empresarial.detail', 'uses' => 'MainController@empresarialDetail']);
+
 //Route::get('noticias/{kind_of_new}', ['as' => 'kind_of_new.show', 'uses' => 'MainController@show']);
 
 //Prueba
@@ -120,6 +122,39 @@ Route::delete('noticias/deshabilitar/{id}', ['as' => 'new.deshabilitar', 'uses' 
 //Route::delete('etiquetas/habilitar/{id}', ['as' => 'new.habilitar', 'uses' => 'AdminNewsController@habilitar']);
 
 
+Route::get('empresariales', ['as' => 'empresarial.index', 'uses' => 'EmpresarialController@index']);
+
+Route::get('empresariales/crear', ['as' => 'empresarial.create', 'uses' => 'EmpresarialController@create']);
+
+Route::post('empresariales', ['as' => 'empresarial.store', 'uses' => 'EmpresarialController@store']);
+
+Route::get('empresariales/{id}/editar', ['as' => 'empresarial.edit', 'uses' => 'EmpresarialController@edit']);
+
+Route::put('empresariales/{id}', ['as' => 'empresarial.update', 'uses' => 'EmpresarialController@update']);
+
+Route::delete('empresariales/deshabilitar/{id}', ['as' => 'empresarial.deshabilitar', 'uses' => 'EmpresarialController@deshabilitar']);
+
+Route::delete('etiquetas/habilitar/{id}', ['as' => 'empresarial.habilitar', 'uses' => 'EmpresarialController@habilitar']);
+
+
+
+Route::get('yaravi/programacion', ['as' => 'programacion.index', 'uses' => 'MainProgramacionController@index']);
+
+
+
+Route::get('yaravi/servicios', ['as' => 'servicios.index', 'uses' => 'MainServiciosController@index']);
+
+
+
+Route::get('yaravi/amakella', ['as' => 'amakella.index', 'uses' => 'MainAmakellaController@index']);
+
+
+
+Route::get('yaravi/nosotros/equipodetrabajo', ['as' => 'nosotros.equipotrabajo', 'uses' => 'MainNosotrosController@equipotrabajo']);
+
+Route::get('yaravi/nosotros/historia', ['as' => 'nosotros.historia', 'uses' => 'MainNosotrosController@historia']);
+
+Route::get('yaravi/nosotros/quienessomos', ['as' => 'nosotros.quienessomos', 'uses' => 'MainNosotrosController@quienessomos']);
 
 
 //Route::get('login', ['as' => 'admin.index', 'uses' => 'AdminController@index']);
