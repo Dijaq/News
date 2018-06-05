@@ -37,12 +37,13 @@
 			
 			<div class="col-md-3" align="right" style="position: relative;">
 				<div class="row">
-					<div class="col-md-8"  align="left">
+					<div class="col-md-2"></div>
+					<div class="col-md-7"  align="left" style="color: white">
 						En vivo ahora<br>	
 						106.3FM - 930AM
 					</div>
 					<div class="play_en_vivo" align="right"  style="position: absolute; right: 20px; top: 5px;">
-						<img height="40px" src="{{asset('storage/play_button.png')}}" alt="">
+						<a href="http://www.radios.com.pe/yaravi-arequipa/" target="_blank"><img height="40px" src="{{asset('storage/play_button.png')}}" alt=""></a>
 					</div>
 				</div>
 			</div>			
@@ -76,16 +77,6 @@
 
 	</div>
 
-	<div id="fb-root"></div>
-		<script>(function(d, s, id) {
-		  var js, fjs = d.getElementsByTagName(s)[0];
-		  if (d.getElementById(id)) return;
-		  js = d.createElement(s); js.id = id;
-		  js.src = 'https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v3.0';
-		  fjs.parentNode.insertBefore(js, fjs);
-		}(document, 'script', 'facebook-jssdk'));</script>	
-
-	
 	<footer id="myFooter">
         <div class="footerHeader" ></div>
 	    <div class="container">
@@ -120,6 +111,16 @@
 			</div>
 	    </div>
     </footer>
+
+    <div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = 'https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v3.0';
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>	
+
 </body>
 </html>
 

@@ -26,7 +26,7 @@ class CreatePublicityRequest extends FormRequest
         return [
             'nombre' => 'required',
             'url_publicidad' => 'required',
-            'dir_image' => 'required'
+            'dir_image' => 'required|max:2000000'
         ];
     }
 }

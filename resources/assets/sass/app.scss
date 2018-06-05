@@ -15,13 +15,30 @@
 
 
 .article-contenido{
-	/*background-color: #0B2161;*/
-	background-color:#0B2F3A;
+	/*background-color: #0B2F3A;
+	196076
+	25637A
+	255A7A
+	1A5B6F
+	1A4A68
+	194763
+	*/
+	background-color:#194763;
 	font-weight: bold;
 	color: #FFFFFF;
 	padding: 10px;
 	font-family: Arial;
 }
+
+.article-principal{
+	/*background-color: #0B2161;*/
+	/*background-color:#0B2F3A;*/
+	font-weight: bold;
+	color: #FFFFFF;
+	padding: 10px;
+	font-family: Arial;
+}
+
 
 .nota_etiqueta{
 	position: absolute;
@@ -50,6 +67,14 @@
 .summary_article
 {
 	text-align: justify;
+	font-size: 1.1rem;
+	font-family: "Georgia";
+}
+
+.information_radio
+{
+	font-size: 1.05rem;
+	font-family: "Georgia";	
 }
 
 .fecha_article
@@ -79,13 +104,15 @@
 .content_article
 {
 	margin-top: 20px;
-	text-align: justify;
-}
-
-p
-{
 	font-size: 1.1rem;
 	font-family: "Georgia";
+	/*text-align: justify;*/
+}
+	
+p
+{
+	/*font-size: 1.1rem;
+	font-family: "Georgia";*/
 }
 
 .banner-block
@@ -129,9 +156,9 @@ p
 .redes_etiqueta>a>i
 {
 	position: absolute;
-	background-color: #690;
+	/*background-color: #690;
 	color: #FFFFFF;
-	padding: 3px;
+	padding: 3px;*/
 }
 
 .redes_etiqueta

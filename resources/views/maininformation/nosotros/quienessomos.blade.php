@@ -3,7 +3,7 @@
 @section('contenido')
 
 	<div class="row">
-		<div class="col-md-9">
+		<div class="information_radio col-md-9">
 			<h1>Quienes Somos</h1>
 			
 			<p>El Centro de Comunicación Amakella en el campo de la comunicación se abre paso gracias a la pasión por la radio del padre Eloy Arribas Lázaro que junto a un grupo de entusiastas jóvenes de barrio crea el Centro de Comunicación Amakella inspirado en lo que fue el boletín del mismo nombre repartido desde inicios de los años 70 en la Parroquia Cristo Obrero de Edificadores Misti, distrito Miraflores.</p>

@@ -3,7 +3,7 @@
 @section('contenido')
 
 	<div class="row">
-		<div class="col-md-9">
+		<div class="information_radio col-md-9">
 			<h1>Historia</h1>
 
 			<iframe width="100%" height="400" src="https://www.youtube.com/embed/Q989Lvuqjo4?ecver=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>

@@ -42,9 +42,14 @@ class PublicityController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+    
     public function store(CreatePublicityRequest $request)
     {
-        $directorio = $request->file('dir_image')->store('public/publicity');  
+        /*return  dd($request->file('dir_image'));*/
+        
+        
+        $directorio = $request->file('dir_image')->store('public/publicity', 50);  
+        return "Yes";
         $publicity = new Publicidad;
         $publicity->idUser = auth()->user()->id;
         $publicity->name = $request->input('nombre');

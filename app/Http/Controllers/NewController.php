@@ -1,7 +1,7 @@
 <?php
 
 
-//Controlador que administra el contenido de una noticia (Vista de USARIO)
+//Controlador que administra el contenido de una noticia (Vista de USARIO de UNA NOTICIA)
 namespace radioyaravi\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -24,7 +24,7 @@ class NewController extends Controller
      */
     public function index($name, $id)
     {
-        $labels = Label::all();
+        $labels = Label::all()->where('estado', Config::get('constantes.estado_habilitado'));
         $detailnew = News::with('label')->with('contentnews')->get()->where('id', $id)->first();
         
         $moreNews = News::with('contentnews')->take(Config::get('constantes.numero_noticias_relacionadas'))->where('idLabelNews', $detailnew->idLabelNews)->get();

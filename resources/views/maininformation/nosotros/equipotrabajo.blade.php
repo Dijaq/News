@@ -3,7 +3,7 @@
 @section('contenido')
 
 	<div class="row">
-		<div class="col-md-9">
+		<div class="information_radio col-md-9">
 			<h1>Equipo de Trabajo</h1>
 
 			<strong><h3>Dirección - Gerencia</h3></strong>
