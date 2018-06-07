@@ -8,6 +8,7 @@ use radioyaravi\User;
 use Illuminate\Http\Request;
 use Config;
 use radioyaravi\Http\Requests\CreatePublicityRequest;
+use Intervention\Image\ImageManager;
 
 class PublicityController extends Controller
 {
@@ -45,11 +46,30 @@ class PublicityController extends Controller
     
     public function store(CreatePublicityRequest $request)
     {
-        /*return  dd($request->file('dir_image'));*/
+        $image       = $request->file('dir_image');
+        $filename    = $image->getClientOriginalName();
         
-        
-        $directorio = $request->file('dir_image')->store('public/publicity', 50);  
-        return "Yes";
+        $image_resize = \Image::make($image->getRealPath());
+        list($width, $height) = getimagesize($image);
+
+        if($width >= 800)
+        {
+            $newWidth = 800;
+            $lessWidth = ($width-$newWidth)/$width;
+            $newHeight = $height-$lessWidth*$height; 
+            $image_resize->resize($newWidth, $newHeight);
+        }
+
+        if (!file_exists(storage_path('app\public\publicity\\')))
+        {
+             //mkdir(public_path('publicity\\'), 777, true);
+             return 'El directorio no existe';
+        }
+        //return public_path('publicity');
+        $image_resize->save(storage_path('app\public\publicity\\'. $filename));
+
+        //$directorio = $request->file('dir_image')->store('public/publicity'); 
+        $directorio = 'public/publicity/'.$filename; 
         $publicity = new Publicidad;
         $publicity->idUser = auth()->user()->id;
         $publicity->name = $request->input('nombre');
