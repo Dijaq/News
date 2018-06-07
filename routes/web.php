@@ -11,6 +11,12 @@
 |
 */
 
+Route::get('prueba', function()
+{
+	return 'True';
+
+});
+
 Route::get('test', function(){
 	$user = new radioyaravi\User;
 	$user->name = 'Diego';
