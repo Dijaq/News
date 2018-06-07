@@ -3514,7 +3514,7 @@
             },
             "require": {
                 "doctrine/instantiator": "^1.0.5",
-                "php": ">=7.0.0"
+                "php": ">=7.0.0",
                 "phpunit/php-text-template": "^1.2.1",
                 "sebastian/exporter": "^3.1"
             },
